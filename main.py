@@ -12,10 +12,6 @@ def encoder(password):
     return encoded
 
 
-def decoder(encoded_num):
-    pass
-
-
 if __name__ == "__main__":
     menu_options()
     option = int(input("Please enter an option: "))
