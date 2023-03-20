@@ -50,7 +50,7 @@ if __name__ == "__main__":
         if option == 1:  # allows user to put in password and encode it
             password = input("Please enter your password to encode: ")
             encoded_num = encoder(password)
-            print("Your password has been encoded and stored!")
+            print("Your password has been encoded and stored!\n")
         if option == 2:
             # decodes the user's encoded_num
             decoded_num = decoder(encoded_num)
