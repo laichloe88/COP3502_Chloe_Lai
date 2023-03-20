@@ -1,19 +1,22 @@
 # Chloe Lai Lab 06
 def menu_options():
+    # function that contains the menu options
     print("Menu")
     print("-------------")
     print("1. Encode\n2. Decode\n3. Quiz\n")
 
 
 def encoder(password):
+    # encodes the password
     encoded = ""
     for num in password:
         if int(num) <= 6:
+            # if number is less than or equal to 6, integer 3 will be added
             number = int(num) + 3
-        else:
+        else:  # numbers greater than six will only have the last digit encoded
             number = int(num) + 3
             number = str(number)[1]
-        encoded += str(number)
+        encoded += str(number)  # add the encoded numbers into a string
     return encoded
 
 
@@ -40,10 +43,11 @@ def decoder(string_data):
 
 if __name__ == "__main__":
     while True:
+        # loop continues until the user wants to exit the program
         menu_options()
         option = int(input("Please enter an option: "))
 
-        if option == 1:
+        if option == 1:  # allows user to put in password and encode it
             password = input("Please enter your password to encode: ")
             encoded_num = encoder(password)
             print("Your password has been encoded and stored!")
@@ -53,5 +57,5 @@ if __name__ == "__main__":
             # prints the encoded and decoded passwords
             print(f"The encoded password is {encoded_num}, and the original password is {decoded_num}.")
             print()
-        if option == 3:
+        if option == 3:  # exits loop if user wants to exit the program
             break
