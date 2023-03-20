@@ -1,15 +1,24 @@
 def menu_options():
     print("Menu")
     print("-------------")
-    print("1. Encode\n2. Decode\n3. Quiz\n")
+    print("1. Encode\n2. Decode\n3. Quit\n")
 
 
 def encoder(password):
     encoded = ""
+    password = str(password)
     for num in password:
-        number = int(num) + 3
+        if int(num) <= 6:
+            number = int(num) + 3
+        else:
+            number = int(num) + 3
+            number = str(number)[1]
         encoded += str(number)
     return encoded
+
+
+def decoder(encoded_num):
+    pass
 
 
 if __name__ == "__main__":
