@@ -1,3 +1,4 @@
+# Chloe Lai Lab 06
 def menu_options():
     print("Menu")
     print("-------------")
@@ -38,10 +39,10 @@ def decoder(string_data):
 
 
 if __name__ == "__main__":
-    menu_options()
-    option = int(input("Please enter an option: "))
-
     while True:
+        menu_options()
+        option = int(input("Please enter an option: "))
+
         if option == 1:
             password = input("Please enter your password to encode: ")
             encoded_num = encoder(password)
