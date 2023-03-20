@@ -7,7 +7,11 @@ def menu_options():
 def encoder(password):
     encoded = ""
     for num in password:
-        number = int(num) + 3
+        if int(num) <= 6:
+            number = int(num) + 3
+        else:
+            number = int(num) + 3
+            number = str(number)[1]
         encoded += str(number)
     return encoded
 
@@ -36,6 +40,7 @@ def decoder(string_data):
 if __name__ == "__main__":
     menu_options()
     option = int(input("Please enter an option: "))
+
     while True:
         if option == 1:
             password = input("Please enter your password to encode: ")
